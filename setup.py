@@ -53,7 +53,7 @@ if sys.version_info[0] >= 3:
                          'install_requires': ['python-dateutil >= 2',
                                               'pytz >= 2011k',
                                               'numpy == 1.12.0'],
-                         'setup_requires': ['numpy==1.12.0'],
+                         'setup_requires': ['numpy <= %s' % min_numpy_ver],
                          }
     if not _have_setuptools:
         sys.exit("need setuptools/distribute for Py3k"
@@ -64,7 +64,7 @@ else:
         'install_requires': ['python-dateutil',
                             'pytz >= 2011k',
                              'numpy==1.12.0'],
-        'setup_requires': ['numpy==1.12.0'],
+        'setup_requires': ['numpy <= %s' % min_numpy_ver],
         'zip_safe': False,
     }
 
