@@ -11,7 +11,7 @@ xlwt
 html5lib
 patsy
 beautiful-soup
-numpy==1.12.0
+numpy
 cython
 scipy
 numexpr
